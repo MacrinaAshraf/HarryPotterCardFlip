@@ -1,34 +1,35 @@
 .play
 {
-	margin-left: 1300px;
+	margin-left: 1000px;
 	width: 100px;
 }
+
 .button
 {
 	width:100px;
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
+
 .label
 {
 	border:solid;
-	width: 600px;
+	width: 350px;
 	height: 30px;
     margin-left: 200px;
+    text-align: center;
 }
+
 .choice
 {
 	margin-left: 10px;
 }
 
 .LEVELS
-{
-	
+{	
 	margin-left: 170PX;
 	font-size: 30px;
 	color:powderblue;
-
-
 }
 
 h1
@@ -56,23 +57,19 @@ h1
 	font-weight: bold;
 	margin-left: 10px;
 	text-align:center; 
-
-
 }
+
 .div2, .div3, .div4
 {
-	
-    
     text-align: center;
 	width:270px;
 	height:300px;
-	 margin-top:0px;
-	 display: inline-block;
-	 
-	 position: relative;
-	 border: solid; 
-	
+	margin-top:0px;
+	display: inline-block; 
+	position: relative;
+	border: solid; 
 }
+
 .div2
 {
 	margin-left: 200px;
