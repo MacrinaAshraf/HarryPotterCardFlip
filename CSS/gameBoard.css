@@ -1,0 +1,29 @@
+.board
+{
+	width: 370px;
+	height: 450px;
+	margin: 70px auto; 
+}
+
+.timer
+{
+	margin-left: 100px;
+	width: 70px;
+	height: 30px;
+}
+
+.score
+{
+	margin: 20px 100px;
+	width: 70px;
+	height: 30px;
+}
+
+.cellDiv
+{
+	background: #000;
+    float: left;
+    height: 100px;
+    margin: 5px;
+    width: 80px;
+}
