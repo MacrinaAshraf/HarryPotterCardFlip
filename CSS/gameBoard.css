@@ -28,6 +28,11 @@
     width: 80px;
 }
 
+.cellDiv:active
+{
+	transform: scale(0.97);
+}
+
 .front-face, .back-face
 {
 	width: 80px;
