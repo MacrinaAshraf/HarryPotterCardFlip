@@ -3,6 +3,7 @@
 	width: 370px;
 	height: 450px;
 	margin: 70px auto; 
+	perspective: 1000px; /*creating 3D Space to add the cards in it*/
 }
 
 .timer
@@ -38,12 +39,15 @@
     float: left;
     height: 100px;
     margin: 5px;
-    width: 80px;
+	width: 80px;
+	transform-style: preserve-3d; /*placing the card into the 3D Space Created*/
+	transition: transform 0.5s; /*give the card rotation flexibilty and more appealing transition*/
 }
 
 .cellDiv:active
 {
 	transform: scale(0.97);
+	transition: transform 0.2s;
 }
 
 .front-face, .back-face
@@ -51,4 +55,15 @@
 	width: 80px;
 	height: 100px;
 	position: absolute;
+	backface-visibility: hidden;
+}
+
+.cellDiv.flip
+{
+	transform: rotateY(180deg);
+}
+
+.front-face
+{
+	transform: rotateY(180deg);
 }
