@@ -6,21 +6,21 @@ body
 {
 margin: 0;
 padding: 0;
-background: #333;
+background-image:url(../srcs/backGroundLoading.jpg);
 }
 .percent_count
 {
     width: 450px;
     height: 50px;
     margin: 100px auto;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     color: #fff;
 }
 .progress_bar
 {
     width: 506px;
-    height: 26px;
+    height: 36px;
     margin: 50px auto; /*The value of said property is adjusted automatically according to the content or the context of the element.*/
     background-color: #bbb;
     border-radius:13px ;
@@ -29,7 +29,7 @@ background: #333;
 .progress
 {
     width: 500px;
-    height: 20px;
+    height: 30px;
     border-radius:10px ;
     background-color:dodgerblue;
 
