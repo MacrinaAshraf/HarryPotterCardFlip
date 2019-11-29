@@ -8,8 +8,21 @@
 .timer
 {
 	margin-left: 100px;
-	width: 70px;
-	height: 30px;
+	width: 100px;
+	height: 70px;
+}
+
+.timer_image
+{
+    width: 40px;
+    height: 30px;
+}
+
+#timerLable{
+    /*padding-top: 70px;*/
+    display: inline;
+    font-size: 125%;
+   /*padding-left: 70px;*/
 }
 
 .score
