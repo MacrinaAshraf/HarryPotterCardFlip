@@ -1,0 +1,21 @@
+*
+{
+    box-sizing: border-box; /*box-sizing Defines how the width and height of an element are calculated, should they include padding and borders, or not*/
+}
+body
+{
+margin: 0;
+padding: 0;
+}
+.timer_image
+{
+    width: 200px;
+    height: 100px;
+
+}
+#timerLable{
+    padding-top: 70px;
+
+    font-size: 150%;
+    padding-left: 70px;
+}
