@@ -8,7 +8,13 @@ function progressFunction()
     {
         if(progress === 500 && counter === 100)
         {
+            precent.style.color = "white";
+            precent.innerHTML = precent.innerHTML +" test";
             clearInterval(id);
+            setTimeout(function(){ window.location="flipCard.html";}, 3000);
+
+            
+
         }
         else{
             progress=progress+5;
@@ -20,5 +26,17 @@ function progressFunction()
     }
     ,50);
 }
+var startButton=document.getElementsByTagName("button")[0];
+function print()
+{
+    startButton.style.display="none";
+    var percentCount=document.getElementsByClassName("percent_count")[0];
+    var progress_bar=document.getElementsByClassName("progress_bar")[0];
+    percentCount.style.display="block";
+    progress_bar.style.display="block";
+    document.getElementById("audio").play();
+    progressFunction();
 
-progressFunction();
+}
+startButton.addEventListener('click',print)
+

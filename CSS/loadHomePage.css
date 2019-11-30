@@ -8,6 +8,20 @@ margin: 0;
 padding: 0;
 background-image:url(../srcs/backGroundLoading.jpg);
 }
+button
+{
+    margin: 150px; 
+    margin-left: 450px;;
+    background-color:darkgray; 
+    border-radius: 30px;
+    padding: 0px;
+
+}
+img
+{
+    width:410px ;
+    height:200px
+}
 .percent_count
 {
     width: 450px;
@@ -15,7 +29,8 @@ background-image:url(../srcs/backGroundLoading.jpg);
     margin: 100px auto;
     font-size: 60px;
     text-align: center;
-    color: #fff;
+    color:darkgray;
+    display: none;
 }
 .progress_bar
 {
@@ -25,6 +40,8 @@ background-image:url(../srcs/backGroundLoading.jpg);
     background-color: #bbb;
     border-radius:13px ;
     padding:3px;
+    display: none;
+
 }
 .progress
 {
