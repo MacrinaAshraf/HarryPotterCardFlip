@@ -1,22 +1,31 @@
+body
+{
+	background-image:url(../srcs/Hogwarts.jpg);
+	background-size: 100%;
+}
 .board
 {
-	width: 370px;
-	height: 450px;
-	margin: 70px auto; 
+	width: 470px;
+	height: 550px;
+	margin: 10px auto; 
 	perspective: 1000px; /*creating 3D Space to add the cards in it*/
 }
 
 .timer
 {
 	margin-left: 100px;
-	width: 100px;
-	height: 70px;
+	width: 60px;
+	height: 80px;
+	background: rgba(40, 27, 71, 0.651);
+	border: maroon;
+	border-style: solid;
+	border-radius: 15px;
 }
 
 .timer_image
 {
-    width: 40px;
-    height: 30px;
+    width: 60px;
+    height: 50px;
 }
 
 #timerLable{
@@ -31,15 +40,20 @@
 	margin: 20px 100px;
 	width: 70px;
 	height: 30px;
+	background-color: rgba(128, 0, 0, 0.651);
+	border: maroon;
+	border-style: solid;
+	border-radius: 15px;
+	font-size: 20px;
 }
 
 .cellDiv
 {
 	background: #000;
     float: left;
-    height: 100px;
+    height: 120px;
     margin: 5px;
-	width: 80px;
+	width: 100px;
 	transform-style: preserve-3d; /*placing the card into the 3D Space Created*/
 	transition: transform 0.5s; /*give the card rotation flexibilty and more appealing transition*/
 }
@@ -52,8 +66,8 @@
 
 .front-face, .back-face
 {
-	width: 80px;
-	height: 100px;
+	width: 100px;
+	height: 120px;
 	position: absolute;
 	backface-visibility: hidden;
 }
