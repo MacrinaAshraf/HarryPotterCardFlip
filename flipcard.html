@@ -1,36 +1,46 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="CSS/flipcard.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="div1" >
-		<input class="button" type="submit" id="howtoplay" value="How to play"/>
-		<input class="button" type="submit" id="aboutus" value="About us"/>
+	<div class="dropdown" onclick="myFunction(this)">
+		<!--<button class="dropbtn">Menu</button>-->
+		<div class="bar1"></div>
+  		<div class="bar2"></div>
+  		<div class="bar3"></div>
+		<div class="dropdown-content">
+				<a href="#">How to play</a>
+				<a href="#">About us</a>
+		</div>
 	</div>
     <div class="div2">
-		<img id="harry" class="photo" src="srcs/photo1.jpg">
-		<h1 >Harry</h1>
+		<img id="hary" class="photo" src="srcs/Harry.jpg" alt="Be in Harry Team.">
+		<!--<h1 >Character 1</h1>-->
 	</div>
     <div class="div3">
-		<img id="ron" class="photo" src="srcs/photo2.png">
-		<h1 >Ron</h1>
+		<img id="hermione" class="photo" src="srcs/Hermione.jpg" alt="Be in Hermione Team.">
+		<!--<h1 >Character 2</h1>-->
 	</div>
     <div class="div4">
-		<img id="hermione" class="photo" src="srcs/photo3.jpg">
-		<h1 >Hermione</h1>
+		<img id="ron" class="photo" src="srcs/Ron.jpg" alt="Be in Ron Team.">
+		<!--<h1 >Character 3</h1>-->
 	</div>
-	<P class="LEVELS">LEVELS</P>
 	<div class="label">
-		<label class="choice" for="easy">Easy</label>
-		<input id="easy" name="element_4" class="element_radio" type="radio" value="1" />
-	    <label class="choice" for="medium">Medium</label>
-	    <input id="medium" name="element_4" class="element_radio" type="radio" value="2" />
-		<label class="choice" for="hard">Hard</label>
-		<input id="hard" name="element_4" class="element_radio" type="radio" value="3" />
+		<label class="choice" for="element_4_1">Easy</label>
+		<input id="element_4_1" name="element_4" class="element_radio" type="radio" value="1" />
+	    <label class="choice" for="element_4_2">Intermediate</label>
+	    <input id="element_4_2" name="element_4" class="element_radio" type="radio" value="2" />
+		<label class="choice" for="element_4_1">Hard</label>
+		<input id="element_4_1" name="element_4" class="element_radio" type="radio" value="3" />
 	</div>
 
-	<input class="play" id="play" type="submit" name="play" value="play" />
+	<input class="play" type="submit" name="play" value="play" />
 
-	
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
 </body>
 </html>
