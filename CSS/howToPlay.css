@@ -1,15 +1,20 @@
+body
+{
+    background-image:url(../srcs/b1.jpg);
+	background-size: 100%;
+}
 .baseForm
 {
-    background-color: white;
+    background-color: lavender;
     border: 1px solid #008CBA;
     padding-top: 25px;
     width: 450px;
-    height: 600px;
+    height: 550px;
     position: absolute;
     bottom: initial;
     left: 0;
     right: 0;
-    top: 10%;
+    top: 6%;
     margin: auto;
     box-shadow: 3px 3px #008CBA;
 }
@@ -29,8 +34,8 @@
     margin: auto;
     position: relative;
     background-position: center center;
-    background-image: url(../srcs/Harry_Potter_wordmark.jpg);
-    background-size: 300px 65px;
+    background-image: url(../srcs/harry-potter-logo-png-5.png);
+    background-size: 300px 85px;
     height: 100px;
     background-repeat: no-repeat;
 }
@@ -53,7 +58,8 @@
 	background-color: #008CBA;
 	border: none;
 	color: white;
-	padding: 15px 10px;
+    padding: 15px 10px;
+    border-radius: 15px;
  	text-align: center;
     display: inline-block;
     position: absolute;
