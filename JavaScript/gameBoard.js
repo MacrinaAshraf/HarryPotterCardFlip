@@ -1,4 +1,6 @@
-var gameBoard = function()
+
+//This Code will be Modified for OOP but this only kept now for testing the card rotation
+var gameBoard = function(cards)
 {
     this.firstCard = null;
     this.secondCard = null;
