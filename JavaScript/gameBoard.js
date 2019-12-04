@@ -1,81 +1,70 @@
-
-//This Code will be Modified for OOP but this only kept now for testing the card rotation
-const cards = document.getElementsByClassName('cellDiv');
-
-var hasFlippedCard = false;
-var firstCard, secondCard;
-var lockBoard = false ; //used to lock the board from receiving any clicks until different cards finish unflipping
-
-function flipCard()
+var gameBoard = function()
 {
-    //if the user tries to flip cards while another two cards are being unflipped at the same time
-    //disregard his action to avoid crashes
-    if(lockBoard)
-        return;
-
-    if(this === firstCard)
-        return;
-
-    this.classList.add('flip');
+    this.firstCard = null;
+    this.secondCard = null;
+    this.hasFlippedCard = false;
+    this.lockBoard = false;
     
-    if(hasFlippedCard)
-    {
-        secondCard = this;
-        if(checkMatch(firstCard, secondCard))
-        {
-            //disable both cards from being flipped back again
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard); 
-            resetBoardVars();
-        }
-        else
-        {
-            lockBoard = true;
-            setTimeout(unflipCards, 1000, firstCard, secondCard);
-        }
-    }
-    else
-    { 
-        hasFlippedCard = true;
-        firstCard = this;
-    }
 }
 
-/**
- * unflipCards removes the flip class from the class list of the selected cards to unflip them back again
- * @param {cellDiv} firstCard 
- * @param {cellDiv} secondCard 
- */
-function unflipCards(firstCard, secondCard)
-{
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
-    resetBoardVars();
-}
-
-/**
- * checkMatch checks if the front face images' sources if both sources are the same then it returns true else it returns false
- * @param {cellDiv} firstCard 
- * @param {cellDiv} secondCard 
- */
-function checkMatch(firstCard, secondCard)
+gameBoard.prototype.checkMatch = function(firstCard, secondCard)
 {
     if(firstCard.children[0].src === secondCard.children[0].src)
         return true;
     return false;
 }
 
-/**
- * This function resets the used variables in the board
- */
-function resetBoardVars()
+gameBoard.prototype.resetBoardVars = function()
 {
-    firstCard = null;
-    secondCard = null;
-    hasFlippedCard = false;
-    lockBoard = false;
+    this.firstCard = null;
+    this.secondCard = null;
+    this.hasFlippedCard = false;
+    this.lockBoard = false;
 }
 
+var gameBoardObj = new gameBoard();
+flipCard = function()
+{
+    if(gameBoardObj.lockBoard)
+        return;
+    
+    if(this === gameBoardObj.firstCard)
+        return;
+
+    this.classList.add('flip');
+    
+    if(gameBoardObj.hasFlippedCard)
+    {
+        gameBoardObj.secondCard = this;
+        if(gameBoardObj.checkMatch(gameBoardObj.firstCard, gameBoardObj.secondCard))
+        {
+            //disable both cards from being flipped back again
+            gameBoardObj.firstCard.removeEventListener('click', flipCard);
+            gameBoardObj.secondCard.removeEventListener('click', flipCard); 
+            gameBoardObj.resetBoardVars();
+        }
+        else
+        {
+            gameBoardObj.lockBoard = true;
+            setTimeout(unflipCards, 1000, gameBoardObj.firstCard, gameBoardObj.secondCard);
+        }
+    }
+    else
+    {
+        gameBoardObj.hasFlippedCard = true;
+        gameBoardObj.firstCard = this;
+    }
+
+}
+
+unflipCards = function(firstCard, secondCard)
+{
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+    gameBoardObj.resetBoardVars();
+}
+
+const cards = document.getElementsByClassName('cellDiv');
 for(var i = 0; i < cards.length; i++)
 {
     cards[i].addEventListener('click', flipCard);
