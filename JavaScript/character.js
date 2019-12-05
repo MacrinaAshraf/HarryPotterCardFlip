@@ -27,13 +27,13 @@ character.prototype.getCharArr = function()
 
 var obj = new character();
 var divClicked;
-function addEve() {
+//function addEve() {
     var divs = document.getElementsByClassName('photo');
     for (var i = 0; i < divs.length; i++) {
         divs[i].addEventListener('click', prepareCharacter);
     }
     
-}
+//}
 
 
 function prepareCharacter() {
@@ -56,7 +56,7 @@ console.log(divClicked);
 //     return divClicked.id;
 // }
 
-addEve();
+//addEve();
 
 // obj.getCharArr();
 // console.log(obj);
