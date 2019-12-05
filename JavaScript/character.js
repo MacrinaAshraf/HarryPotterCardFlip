@@ -23,16 +23,16 @@ character.prototype.getCharArr = function()
     return this.charArr;
 }
 
-// function prepareCharacter()
-// {
-//     this.classList.toggle('clicked');
-// }
+function prepareCharacter()
+{
+    this.classList.toggle('clicked');
+}
 
-// var divs = document.getElementsByClassName('photo');
-// for(var i = 0; i < divs.length; i++)
-// {
-//     divs[i].addEventListener('click', prepareCharacter);
-// }
+var divs = document.getElementsByClassName('photo');
+for(var i = 0; i < divs.length; i++)
+{
+    divs[i].addEventListener('click', prepareCharacter);
+}
 
 // var playButton = document.getElementsByClassName('play')[0];
 
