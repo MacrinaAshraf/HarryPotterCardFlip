@@ -20,11 +20,33 @@ var playButton=document.getElementsByClassName("playSubmit")[0];
 playButton.addEventListener('click',function(){ window.location="gameBoard.html"});
 
 
+//----------------sound----------------
+var sound = document.getElementsByClassName("audio_Image")[0];
+var soundPaly = 0;
+function print()
+{
+    console.log(sound.src.name)    
+    if(soundPaly == 0)
+    {
+        soundPaly = 1;
+        sound.setAttribute('src', "srcs/audio.jpg");
+        document.getElementById("audio").play();
+        document.getElementById("audio").loop = true;
+    }
+    else
+    {
+        soundPaly = 0;
+        sound.setAttribute('src', "srcs/mute.png");
+        document.getElementById("audio").pause();
+    }
+    
+}
+sound.addEventListener('click', print);
 
-var sound=document.getElementsByTagName("body")[0];
+/*var sound=document.getElementsByTagName("body")[0];
 function playMusic()
 {
     document.getElementById("audio").play();
     document.getElementById("audio").loop = true;
 }
-sound.addEventListener('click', playMusic);
+sound.addEventListener('click', playMusic);*/

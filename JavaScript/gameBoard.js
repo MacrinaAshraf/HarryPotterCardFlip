@@ -7,19 +7,19 @@ function print()
     if(soundPaly == 0)
     {
         soundPaly = 1;
-        sound.setAttribute('src' , "srcs/audio.jpg");
+        sound.setAttribute('src', "srcs/audio.jpg");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
         soundPaly = 0;
-        sound.setAttribute('src' , "srcs/mute.png");
+        sound.setAttribute('src', "srcs/mute.png");
         document.getElementById("audio").pause();
     }
     
 }
-sound.addEventListener('click',print)
+sound.addEventListener('click', print);
 
 //----------------gameLogic----------------
 var gameBoard = function()
