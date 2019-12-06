@@ -10,7 +10,20 @@ body
 	margin: 10px auto; 
 	perspective: 1000px; /*creating 3D Space to add the cards in it*/
 }
-
+.hide
+{
+	display: none;
+}
+.show
+{
+	display: inline-block;
+	width: 700px;
+	height: 350px;
+}
+.Win
+{
+	display: none;
+}
 .timer
 {
 	margin-left: 100px;

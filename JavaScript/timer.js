@@ -38,7 +38,18 @@ function stopWatch(){
     else
     {
         document.getElementById("timerLable").innerHTML =  "00:00";
-
+        var Cells = document.getElementsByClassName('cellDiv');
+        var Status = document.getElementsByClassName("Status")[0];
+        if(!Status.classList.contains('show'))
+        {
+            for(var i = 0;i<Cells.length;i++)
+            {
+                Cells[i].classList.add("hide");
+            }
+            Status.setAttribute('src' , "srcs/Lose.gif");
+            Status.classList.remove('Win');
+            Status.classList.add("show");
+        }
     }
 
 }

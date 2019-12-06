@@ -6,14 +6,14 @@ function print()
     if(soundPaly==0)
     {
         soundPaly=1;
-        sound.setAttribute('src' , "srcs/volumeHight.jpg");
+        sound.setAttribute('src' , "srcs/audio-icon.png");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
         soundPaly=0;
-        sound.setAttribute('src' , "srcs/volumeLow.jpg");
+        sound.setAttribute('src' , "srcs/mute-logo.png");
         document.getElementById("audio").pause();
     }
     
@@ -45,6 +45,32 @@ gameBoard.prototype.resetBoardVars = function()
     this.lockBoard = false;
 }
 
+gameBoard.prototype.Winner = function()
+{
+    var Cells = document.getElementsByClassName('cellDiv');
+    var Status = document.getElementsByClassName("Status")[0];
+    var flag = false;
+    for(var i = 0;i<Cells.length;i++)
+    {
+        if(Cells[i].classList.contains('flip'))
+        {
+            flag = true;
+        }
+        else 
+        {
+            return false;
+        }
+    }
+    for(var i = 0;i<Cells.length;i++)
+    {
+        Cells[i].classList.add("hide");
+    }
+    Status.setAttribute('src' , "srcs/tenor.gif");
+    Status.classList.remove('Win');
+    Status.classList.add("show");
+    return flag;
+}
+
 var gameBoardObj = new gameBoard();
 flipCard = function()
 {
@@ -65,6 +91,7 @@ flipCard = function()
             gameBoardObj.firstCard.removeEventListener('click', flipCard);
             gameBoardObj.secondCard.removeEventListener('click', flipCard); 
             gameBoardObj.resetBoardVars();
+            gameBoardObj.Winner();
         }
         else
         {
@@ -90,6 +117,7 @@ const cards = document.getElementsByClassName('cellDiv');
 for(var i = 0; i < cards.length; i++)
 {
     cards[i].addEventListener('click', flipCard);
+    
 }
 
 /*
