@@ -3,19 +3,23 @@
 	<link rel="stylesheet" type="text/css" href="CSS/gameBoard.css">
 </head>
 	<body>
-		<div class="score" >
-			Score
+		<div class="backBtnDiv" >
+			<button  id="backBtn">
+				<img src="srcs/home.png" class="home_image">
+			</button>
 		</div>
-		<div class="timer" >
-			<div id="timerLable">00:00</div> 
-		</div>
-        <div class="audio" >
+
+		<div class="audio" >
 				<audio id="audio" >
 						<source src="audio/Soundtrack.mp3"  >
 				</audio>
             <button class="audio_Button">
-			    <img src="srcs/volumeLow.jpg" class="audio_image">
+			    <img src="srcs/mute.png" class="audio_image">
                 </button>
+		</div>
+
+		<div class="timer" >
+			<div id="timerLable">00:00</div> 
 		</div>
 		
 		<div class="board">

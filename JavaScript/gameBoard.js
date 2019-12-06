@@ -6,14 +6,14 @@ function print()
     if(soundPaly==0)
     {
         soundPaly=1;
-        sound.setAttribute('src' , "srcs/volumeHight.jpg");
+        sound.setAttribute('src' , "srcs/audio.jpg");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
         soundPaly=0;
-        sound.setAttribute('src' , "srcs/volumeLow.jpg");
+        sound.setAttribute('src' , "srcs/mute.png");
         document.getElementById("audio").pause();
     }
     
@@ -86,6 +86,11 @@ unflipCards = function(firstCard, secondCard)
     gameBoardObj.resetBoardVars();
 }
 
+var win = function (argument) {
+    // body...
+    
+}
+
 const cards = document.getElementsByClassName('cellDiv');
 for(var i = 0; i < cards.length; i++)
 {
@@ -114,9 +119,23 @@ var srces=["Harry1","Hermione1","Harry2","Ron2","Ron1","Harry3","Harry4","Harry5
 
 var board = document.getElementsByClassName("front-face");
 
+console.log(board);
+
 for(var i = 0;i<board.length;i+=2)
 {
     source = "srcs/"+srces[i/2]+".jpg";
     board[randomInesxes[i]].setAttribute('src' , source);
     board[randomInesxes[i+1]].setAttribute('src' , source);
+}
+
+var menuBtn = document.getElementById('backBtn');
+
+menuBtn.addEventListener('click', backFun);
+
+function backFun () {
+    var check = confirm("You are about to close the game, Are you sure?");
+
+    if(check){
+        window.location = 'flipCard.html';
+    }
 }

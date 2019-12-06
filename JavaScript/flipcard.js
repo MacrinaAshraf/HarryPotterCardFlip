@@ -5,9 +5,9 @@ function MenuClick(x)
     {
         var dropdowns = document.getElementsByClassName("dropdown-content")[0];
             {
-            var openDropdown = dropdowns;
-            if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
+                var openDropdown = dropdowns;
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
             }
         }
     }
