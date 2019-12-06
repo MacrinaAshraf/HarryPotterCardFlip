@@ -1,3 +1,24 @@
+var sound=document.getElementsByClassName("audio_Image")[0];
+var soundPaly=0;
+function print()
+{
+    console.log(sound.src.name)    
+    if(soundPaly==0)
+    {
+        soundPaly=1;
+        sound.setAttribute('src' , "srcs/volumeHight.jpg");
+        document.getElementById("audio").play();
+        document.getElementById("audio").loop = true;
+    }
+    else
+    {
+        soundPaly=0;
+        sound.setAttribute('src' , "srcs/volumeLow.jpg");
+        document.getElementById("audio").pause();
+    }
+    
+}
+sound.addEventListener('click',print)
 
 
 var gameBoard = function()
@@ -53,7 +74,8 @@ flipCard = function()
     }
     else
     {
-        gameBoardObj.hasFlippedCard = true;
+        gameBoar
+        dObj.hasFlippedCard = true;
         gameBoardObj.firstCard = this;
     }
 }
@@ -73,20 +95,21 @@ for(var i = 0; i < cards.length; i++)
 
 /*
  * Shuffles array in place.
- * Create Random Indexes.
+ * rechange indexes randomly.
  */
-var a = [0, 1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15];
-function shuffle(a) {
-    var j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
+
+var indexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function shuffle(indexes) {
+    var randomNumber, tempVariable, loopStart;
+    for (loopStart = indexes.length - 1; loopStart > 0; loopStart--) {
+        randomNumber = Math.floor(Math.random() * (loopStart + 1));
+        tempVariable = indexes[loopStart];
+        indexes[loopStart] = indexes[randomNumber];
+        indexes[randomNumber] = tempVariable;
     }
-    return a;
+    return indexes;
 }
-var random = shuffle(a);
+var randomInesxes = shuffle(indexes);
 
 var srces=["Harry","Hermione","BPotter","Rj_V4lBh","Ron","Back","fantasyart","Harry"];
 
@@ -95,6 +118,6 @@ var board = document.getElementsByClassName("front-face");
 for(var i = 0;i<board.length;i+=2)
 {
     source = "srcs/"+srces[i/2]+".jpg";
-    board[random[i]].setAttribute('src' , source);
-    board[random[i+1]].setAttribute('src' , source);
+    board[randomInesxes[i]].setAttribute('src' , source);
+    board[randomInesxes[i+1]].setAttribute('src' , source);
 }

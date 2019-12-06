@@ -12,7 +12,8 @@ button
 {
     margin: 150px; 
     margin-left: 450px;;
-    background-color:darkgray; 
+    background:transparent; 
+    border:none;
     border-radius: 30px;
     padding: 0px;
 

@@ -1,3 +1,4 @@
+
 body
 {
 	background-image:url(../srcs/hogwarts-background.png);
@@ -84,7 +85,7 @@ h1
 	display: inline-block;
 	float: inline-start;
 	cursor: pointer;
-	margin-right: 100%;
+	margin-right: 80%;
 	margin-bottom: 90px;
 }
 .bar1, .bar2, .bar3

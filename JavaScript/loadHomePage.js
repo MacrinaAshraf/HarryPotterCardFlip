@@ -9,12 +9,9 @@ function progressFunction()
         if(progress === 500 && counter === 100)
         {
             precent.style.color = "white";
-            precent.innerHTML = precent.innerHTML +" test";
+            precent.innerHTML = precent.innerHTML ;
             clearInterval(id);
             setTimeout(function(){ window.location="flipCard.html";}, 3000);
-
-            
-
         }
         else{
             progress=progress+5;
@@ -35,8 +32,8 @@ function print()
     percentCount.style.display="block";
     progress_bar.style.display="block";
     document.getElementById("audio").play();
+    document.getElementById("audio").loop = true;
     progressFunction();
-
 }
 startButton.addEventListener('click',print)
 

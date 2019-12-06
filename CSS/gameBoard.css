@@ -14,18 +14,45 @@ body
 .timer
 {
 	margin-left: 100px;
+	margin-top: 10px;
+	padding-left: 15px;
 	width: 60px;
-	height: 80px;
-	background: rgba(40, 27, 71, 0.651);
+	height: 30px;
+	background-color: rgba(255, 255, 255, 0.651);
 	border: maroon;
 	border-style: solid;
-	border-radius: 15px;
+	border-radius: 15px;	
 }
 
 .timer_image
 {
     width: 60px;
     height: 50px;
+
+}
+.audio
+{
+	margin: 10px 100px;
+	padding-left: 2px;
+	width: 60px;
+	height: 30px;
+	background:transparent; 
+        border:none;
+}
+
+.audio_image
+{
+        width: 60px;
+	height: 45px; 
+	border-radius: 15px;
+
+}
+.audio_Button
+{       
+    width: 60px;
+    height: 45px;
+    background:transparent; 
+    border:none;
 }
 
 #timerLable{
@@ -37,10 +64,11 @@ body
 
 .score
 {
-	margin: 20px 100px;
-	width: 70px;
+	margin: 10px 100px;
+	padding-left: 10px;
+	width: 60px;
 	height: 30px;
-	background-color: rgba(128, 0, 0, 0.651);
+	background-color: rgba(255, 255, 255, 0.651);
 	border: maroon;
 	border-style: solid;
 	border-radius: 15px;
