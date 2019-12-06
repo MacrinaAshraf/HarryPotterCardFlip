@@ -138,7 +138,15 @@ function shuffle(indexes) {
     return indexes;
 }
 var randomInesxes = shuffle(indexes);
-var srces = localStorage['chosenChar'];
+var srces;
+if (localStorage.getItem("chosenChar") !== null) 
+{ 
+    srces = localStorage['chosenChar'];
+}
+else
+{
+    srces = localStorage['defaultChar'];
+}
 srces = srces.split(",");
 localStorage.removeItem('chosenChar');
 

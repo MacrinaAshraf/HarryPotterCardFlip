@@ -17,7 +17,10 @@ function MenuClick(x)
     }
 }
 var playButton=document.getElementsByClassName("playSubmit")[0];
-playButton.addEventListener('click',function(){ window.location="gameBoard.html"});
+playButton.addEventListener('click',function(){ 
+    window.location="gameBoard.html"
+
+});
 
 
 //----------------sound----------------
