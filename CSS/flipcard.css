@@ -25,6 +25,7 @@ body
 	color: black;
 	border: none;
 	font-size: 100%;
+	outline: none;
 }
 
 .playSubmit:hover

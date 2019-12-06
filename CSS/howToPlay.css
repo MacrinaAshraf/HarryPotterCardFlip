@@ -68,6 +68,7 @@ body
     right: 0;
     top: 86%;
     margin: auto;
+    outline: none;
 }
 
 .backToMain:hover

@@ -63,6 +63,7 @@ body
     height: 45px;
     background:transparent; 
     border:none;
+    outline: none;
 }
 
 .audio_Button:hover
@@ -97,6 +98,7 @@ body
     height: 45px;
     background:transparent; 
     border:none;
+    outline: none;
 }
 
 #backBtn:hover
