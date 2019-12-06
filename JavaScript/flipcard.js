@@ -20,3 +20,11 @@ var playButton=document.getElementsByClassName("playSubmit")[0];
 playButton.addEventListener('click',function(){ window.location="gameBoard.html"});
 
 
+
+var sound=document.getElementsByTagName("body")[0];
+function playMusic()
+{
+    document.getElementById("audio").play();
+    document.getElementById("audio").loop = true;
+}
+sound.addEventListener('click', playMusic);
