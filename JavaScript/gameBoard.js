@@ -7,19 +7,19 @@ function print()
     if(soundPaly == 0)
     {
         soundPaly = 1;
-        sound.setAttribute('src' , "srcs/audio.png");
+        sound.setAttribute('src' , "srcs/audio.jpg");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
         soundPaly = 0;
-        sound.setAttribute('src' , "srcs/mute.png");
+        sound.setAttribute('src', "srcs/mute.png");
         document.getElementById("audio").pause();
     }
     
 }
-sound.addEventListener('click',print)
+sound.addEventListener('click', print);
 
 //----------------gameLogic----------------
 var gameBoard = function()
@@ -159,19 +159,20 @@ var menuBtn = document.getElementById('backBtn');
 //-----------------back button-----------------------------------
 menuBtn.addEventListener('click', backFun);
 
-function backFun () 
-{
+function backFun () {
+
     var Status = document.getElementsByClassName("Status")[0];
+    
     if(!Status.classList.contains('show'))
     {
         var check = confirm("You are about to close the game and lose your progress, Are you sure?");
-        if(check)
-        {
-            window.location = 'flipCard.html';
+
+        if(check){
+            window.location = 'mainPage.html';
         }
     }
     else
     {
-        window.location = 'flipCard.html';
+        window.location = 'mainPage.html';
     }
 }

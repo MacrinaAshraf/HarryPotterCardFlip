@@ -71,5 +71,5 @@ if(localStorage['time'])
 else
 {
     alert('you should chose character and level');
-    window.location="flipCard.html";
+    window.location="mainPage.html";
 }
