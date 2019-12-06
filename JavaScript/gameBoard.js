@@ -56,7 +56,6 @@ flipCard = function()
         gameBoardObj.hasFlippedCard = true;
         gameBoardObj.firstCard = this;
     }
-
 }
 
 unflipCards = function(firstCard, secondCard)
