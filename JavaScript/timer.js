@@ -54,7 +54,7 @@ if(localStorage['time'])
                     Cells[i].classList.add("hide");
                 }
                 Status.setAttribute('src' , "srcs/Lose.gif");
-                Status.classList.remove('Win');
+                Status.classList.remove('hide');
                 Status.classList.add("show");
             }
 

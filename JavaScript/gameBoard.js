@@ -67,7 +67,7 @@ gameBoard.prototype.Winner = function()
         Cells[i].classList.add("hide");
     }
     Status.setAttribute('src' , "srcs/tenor.gif");
-    Status.classList.remove('Win');
+    Status.classList.remove('hide');
     Status.classList.add("show");
     return flag;
 }
@@ -159,15 +159,15 @@ var menuBtn = document.getElementById('backBtn');
 //-----------------back button-----------------------------------
 menuBtn.addEventListener('click', backFun);
 
-function backFun () {
-
+function backFun ()
+{
     var Status = document.getElementsByClassName("Status")[0];
-    
     if(!Status.classList.contains('show'))
     {
         var check = confirm("You are about to close the game and lose your progress, Are you sure?");
 
-        if(check){
+        if(check)
+        {
             window.location = 'mainPage.html';
         }
     }
