@@ -11,7 +11,7 @@ function progressFunction()
             precent.style.color = "white";
             precent.innerHTML = precent.innerHTML ;
             clearInterval(id);
-            setTimeout(function(){ window.location = "flipCard.html";}, 3000);
+            setTimeout(function(){ window.location = "mainPage.html";}, 3000);
         }
         else{
             progress = progress + 5;

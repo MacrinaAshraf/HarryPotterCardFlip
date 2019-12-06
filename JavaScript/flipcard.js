@@ -42,11 +42,3 @@ function print()
     
 }
 sound.addEventListener('click', print);
-
-/*var sound=document.getElementsByTagName("body")[0];
-function playMusic()
-{
-    document.getElementById("audio").play();
-    document.getElementById("audio").loop = true;
-}
-sound.addEventListener('click', playMusic);*/

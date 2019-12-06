@@ -7,7 +7,7 @@ function print()
     if(soundPaly == 0)
     {
         soundPaly = 1;
-        sound.setAttribute('src' , "srcs/audio.png");
+        sound.setAttribute('src' , "srcs/audio.jpg");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
@@ -160,9 +160,19 @@ var menuBtn = document.getElementById('backBtn');
 menuBtn.addEventListener('click', backFun);
 
 function backFun () {
-    var check = confirm("You are about to close the game and lose your progress, Are you sure?");
 
-    if(check){
-        window.location = 'flipCard.html';
+    var Status = document.getElementsByClassName("Status")[0];
+    
+    if(!Status.classList.contains('show'))
+    {
+        var check = confirm("You are about to close the game and lose your progress, Are you sure?");
+
+        if(check){
+            window.location = 'mainPage.html';
+        }
+    }
+    else
+    {
+        window.location = 'mainPage.html';
     }
 }
