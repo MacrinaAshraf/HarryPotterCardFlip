@@ -169,6 +169,10 @@ h1
 	margin-left: 250px;
 }
 
-
+.photo:active
+{
+	transform: scale(0.97);
+	transition: transform 0.2s;
+}
 
 
