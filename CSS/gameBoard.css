@@ -62,10 +62,8 @@ body
 }
 
 #timerLable{
-    /*padding-top: 70px;*/
     display: inline;
     font-size: 125%;
-   /*padding-left: 70px;*/
 }
 
 .backbtnDiv{
@@ -86,16 +84,6 @@ body
 
 #backBtn
 {
-	/*margin: 10px 100px;
-	padding-left: 10px;
-	width: 100px;
-	height: 40px;
-	background-color: rgba(255, 255, 255, 0.651);
-	border: maroon;
-	border-style: solid;
-	border-radius: 15px;
-	color: black;
-	font-size: 100%;*/
 	width: 60px;
     height: 45px;
     background:transparent; 

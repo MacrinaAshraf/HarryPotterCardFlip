@@ -69,3 +69,8 @@ body
     top: 86%;
     margin: auto;
 }
+
+.backToMain:hover
+{
+    cursor: pointer;
+}
