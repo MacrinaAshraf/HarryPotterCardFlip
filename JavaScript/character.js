@@ -6,7 +6,8 @@ var character = function()
     this.hermonie = ['Hermione/Hermione1','Hermione/Hermione2','Hermione/Hermione3','Hermione/Hermione4','Hermione/Hermione5','Hermione/Hermione6','Hermione/Hermione7','Hermione/Hermione8'];
     this.ron = ['Ron/Ron1','Ron/Ron2','Ron/Ron3','Ron/Ron4','Ron/Ron5','Ron/Ron6','Ron/Ron7','Ron/Ron8'];
     //this array will be returned
-    this.charArr=[];
+    this.charArr= this.harry;
+    localStorage.setItem('defaultChar', this.charArr);
 }
 
 character.prototype.setCharArr = function(chosenChar)

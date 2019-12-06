@@ -1,7 +1,24 @@
-if(localStorage['time'])
+var minutes ;
+console.log(typeof(localStorage['time']));
+console.log(localStorage['defaultTime']);
+if (localStorage.getItem("time") !== null) 
 {
+    console.log("1");
+    minutes=localStorage['time'];
+}
+else if (localStorage['defaultTime']!== null)
+{
+    console.log("2");
+    minutes=localStorage['defaultTime'];
+}
+else
+{
+    alert('you should chose character and level');
+    window.location="mainPage.html";
+}
 
-    var minutes = localStorage['time'] - 1;
+
+    var minutes = minutes- 1;
     var seconds = 59;
 
     var condition = seconds + minutes * 60;
@@ -14,8 +31,8 @@ if(localStorage['time'])
    
     function stopWatch()
     {
-        console.log(condition);
-        console.log("condition");
+        //console.log(condition);
+        //console.log("condition");
         if(condition!==0)
         {
             condition--;
@@ -67,9 +84,5 @@ if(localStorage['time'])
         }
     }
     interval = window.setInterval(stopWatch, 1000);
-}
-else
-{
-    alert('you should chose character and level');
-    window.location="mainPage.html";
-}
+
+  

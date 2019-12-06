@@ -1,9 +1,9 @@
 var levels=document.getElementsByClassName('element_radio');
-var play=document.getElementsByClassName('play')[0];
 
 var Level = function(){
-    this.Time;
+    this.Time=3;
     this.level;
+    localStorage.setItem('defaultTime', this.Time);
 }
 
 Level.prototype.getlevel = function(){
@@ -29,7 +29,6 @@ Level.prototype.gettime = function(){
     return this.Time;
 }
 
-
 Level.prototype.settime = function(){
     if(this.level == "Easy")
     {
@@ -43,19 +42,25 @@ Level.prototype.settime = function(){
     {
         this.Time = 1;
     }
-    localStorage.setItem('time', this.Time);
+localStorage.setItem('time', this.Time);
 }
 
 
 var easy = new Level();
-play.addEventListener("click",function()
-{
-    if(easy.gettime() != 0)
-    {
+
+
+var easy = new Level();
+
+var radios=document.getElementsByClassName("element_radio");
+for(radio in radios) {
+    radios[radio].onclick = function() {
         easy.setlevel();
         easy.getlevel()
         easy.settime();
         easy.gettime();
+        //alert(this.value);
     }
-    console.log(easy.gettime());
-});
+}
+
+        
+ 
