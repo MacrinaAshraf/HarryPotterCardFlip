@@ -1,26 +1,27 @@
-var sound=document.getElementsByClassName("audio_Image")[0];
-var soundPaly=0;
+//----------------sound----------------
+var sound = document.getElementsByClassName("audio_Image")[0];
+var soundPaly = 0;
 function print()
 {
     console.log(sound.src.name)    
-    if(soundPaly==0)
+    if(soundPaly == 0)
     {
-        soundPaly=1;
-        sound.setAttribute('src' , "srcs/audio-icon.png");
+        soundPaly = 1;
+        sound.setAttribute('src' , "srcs/audio.png");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
-        soundPaly=0;
-        sound.setAttribute('src' , "srcs/mute-logo.png");
+        soundPaly = 0;
+        sound.setAttribute('src' , "srcs/mute.png");
         document.getElementById("audio").pause();
     }
     
 }
 sound.addEventListener('click',print)
 
-
+//----------------gameLogic----------------
 var gameBoard = function()
 {
     this.firstCard = null;
@@ -137,14 +138,31 @@ function shuffle(indexes) {
     return indexes;
 }
 var randomInesxes = shuffle(indexes);
-
-var srces=["Harry1","Hermione1","Harry2","Ron2","Ron1","Harry3","Harry4","Harry5"];
+var srces = localStorage['chosenChar'];
+srces = srces.split(",");
+localStorage.removeItem('chosenChar');
 
 var board = document.getElementsByClassName("front-face");
 
+console.log(board);
+
 for(var i = 0;i<board.length;i+=2)
 {
-    source = "srcs/"+srces[i/2]+".jpg";
+    source = srces[i/2]+".jpg";
     board[randomInesxes[i]].setAttribute('src' , source);
     board[randomInesxes[i+1]].setAttribute('src' , source);
+}
+
+var menuBtn = document.getElementById('backBtn');
+
+
+//-----------------back button-----------------------------------
+menuBtn.addEventListener('click', backFun);
+
+function backFun () {
+    var check = confirm("You are about to close the game and lose your progress, Are you sure?");
+
+    if(check){
+        window.location = 'flipCard.html';
+    }
 }

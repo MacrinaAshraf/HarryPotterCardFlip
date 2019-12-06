@@ -4,6 +4,7 @@ body
 	background-image:url(../srcs/hogwarts-background.png);
 	background-size: 100%;
 }
+
 .play
 {
 	/*float: right;*/
@@ -17,13 +18,21 @@ body
 	font-size: 25px;
 
 }
+
 .playSubmit
-{	background-color: #8f0fe49a;
+{	
+	background-color: #8f0fe49a;
 	color: black;
 	border: none;
 	background: transparent;
 	font-size: 100%;
 }
+
+.playSubmit:hover
+{
+	cursor: pointer;
+}
+
 .label
 {
 	border:solid;
