@@ -1,54 +1,51 @@
+
 body
 {
 	background-image:url(../srcs/hogwarts-background.png);
 	background-size: 100%;
 }
+
 .play
 {
-	float: right;
-	width: 100px;
+	width: 60px;
 	border-radius: 15px;
-	background-color: #8f0fe49a;
 	border: none;
-	color: white;
-	padding: 15px 32px;
- 	text-align: center;
+	color: black;
   	display: inline-block;
 	font-size: 25px;
+
 }
 
-/*.button
-{
-	width:100px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	background-color: #008CBA;
+.playSubmit
+{	
+	width: 120px;
+	height: 60px;
+	border-radius: 15px;
+	background-color: #8f0fe49a;
+	color: black;
 	border: none;
-	color: white;
-	padding: 15px 10px;
- 	text-align: center;
-  	display: inline-block;
-  	font-size: 16px;
-}*/
+	font-size: 100%;
+	outline: none;
+}
+
+.playSubmit:hover
+{
+	cursor: pointer;
+}
 
 .label
 {
 	border:solid;
 	background-color: rgba(70, 131, 180, 0.596);
-	/*opacity: 0.5;
-    filter: alpha(opacity=40);*/
-	width: 300px;
+	width: 350px;
 	height: 30px;
-    margin-left: 170px;
 	text-align: center;
 	padding: 10px;
 	margin-left: 35%;
+	margin-right: 10%;
 	margin-top: 90px;
 	border-radius: 15px;
-}
-label
-{
-	color: black;
+	display: inline-block;
 }
 
 .choice
@@ -68,7 +65,6 @@ label
 h1
 {
   padding:10px;
-
 }
 
 .photo
@@ -76,9 +72,6 @@ h1
 	height: 300px;
 	width: 270px;
 	border-radius: 15px;
-	/*padding: 10px;*/
-
-
 }
 
 .dropbtn {
@@ -97,29 +90,30 @@ h1
 	display: inline-block;
 	float: inline-start;
 	cursor: pointer;
-	margin-right: 100%;
+	margin-right: 80%;
 	margin-bottom: 90px;
 }
+
 .bar1, .bar2, .bar3
- {
+{
 	width: 35px;
 	height: 5px;
 	background-color: white;
 	margin: 6px 0;
 	transition: 0.4s;
-  }
+}
   
-  .change .bar1 {
+.change .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 	transform: rotate(-45deg) translate(-9px, 6px);
-  }
+}
   
-  .change .bar2 {opacity: 0;}
+.change .bar2 {opacity: 0;}
   
-  .change .bar3 {
+.change .bar3 {
 	-webkit-transform: rotate(45deg) translate(-8px, -8px);
 	transform: rotate(45deg) translate(-8px, -8px);
-  }
+}
 
 .dropdown-content
 {
@@ -142,13 +136,10 @@ h1
 
 .dropdown-content a:hover 
 {
-	background-color: #f1f1f1
+	background-color: #f1f1f1;
+	border-radius: 15px;
 }
 
-/*.dropdown:active .dropdown-content 
-{
-	display: block;
-}*/
 .show
 {
 	display: block;
@@ -158,6 +149,7 @@ h1
 {
 	background-color: #1e4c91;
 }
+
 .div2, .div3, .div4
 {
 	width:270px;
@@ -171,11 +163,62 @@ h1
 	border-radius: 15px;
 }
 
+.div2:active
+{
+	border-color: black;
+}
+
+.div3:active
+{
+	border-color: black;
+}
+
+
+.div4:active
+{
+	border-color: black;
+}
+
 .div2
 {
 	margin-left: 250px;
 }
 
+.audio
+{	
+	margin-right: 30px;
+	float: right;
+	width: 55px;
+	height: 25px;
+	background:transparent; 
+    border:none;
+    display: block;
+}
 
+.audio_image
+{
+    width: 60px;
+	height: 45px; 
+	border-radius: 20px;
+}
+
+.audio_Button
+{       
+    width: 60px;
+    height: 45px;
+    background:transparent; 
+    border:none;
+}
+
+.audio_Button:hover
+{
+	cursor: pointer;
+}
+
+.photo:active
+{
+	transform: scale(0.97);
+	transition: transform 0.2s;	
+}
 
 

@@ -3,6 +3,7 @@ body
 	background-image:url(../srcs/Hogwarts.jpg);
 	background-size: 100%;
 }
+
 .board
 {
 	width: 470px;
@@ -10,41 +11,99 @@ body
 	margin: 10px auto; 
 	perspective: 1000px; /*creating 3D Space to add the cards in it*/
 }
-
+.hide
+{
+	display: none;
+}
+.show
+{
+	display: inline-block;
+	width: 700px;
+	height: 350px;
+}
 .timer
 {
 	margin-left: 100px;
+	margin-top: 30px;
+	padding-left: 15px;
 	width: 60px;
-	height: 80px;
-	background: rgba(40, 27, 71, 0.651);
+	height: 30px;
+	background-color: rgba(255, 255, 255, 0.651);
 	border: maroon;
 	border-style: solid;
-	border-radius: 15px;
+	border-radius: 15px;	
 }
 
 .timer_image
 {
     width: 60px;
     height: 50px;
+
+}
+
+.audio
+{
+	margin: 30px 100px;
+	width: 55px;
+	height: 25px;
+	background:transparent; 
+    border:none;
+}
+
+.audio_image
+{
+    width: 60px;
+	height: 45px; 
+	border-radius: 20px;
+}
+
+.audio_Button
+{       
+    width: 60px;
+    height: 45px;
+    background:transparent; 
+    border:none;
+    outline: none;
+}
+
+.audio_Button:hover
+{
+	cursor: pointer;
 }
 
 #timerLable{
-    /*padding-top: 70px;*/
     display: inline;
     font-size: 125%;
-   /*padding-left: 70px;*/
 }
 
-.score
-{
-	margin: 20px 100px;
-	width: 70px;
+.backbtnDiv{
+	margin: 10px 100px;
+	padding-left: 2px;
+	width: 60px;
 	height: 30px;
-	background-color: rgba(128, 0, 0, 0.651);
-	border: maroon;
-	border-style: solid;
-	border-radius: 15px;
-	font-size: 20px;
+	background:transparent; 
+    border:none;
+}
+
+.home_image
+{
+    width: 60px;
+	height: 45px; 
+	border-radius: 20px;
+}
+
+#backBtn
+{
+	width: 60px;
+    height: 45px;
+    background:transparent; 
+    border:none;
+    outline: none;
+}
+
+#backBtn:hover
+{
+	cursor: pointer;
 }
 
 .cellDiv

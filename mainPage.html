@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/flipcard.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="dropdown" onclick="MenuClick(this)">
+		<div class="bar1"></div>
+  		<div class="bar2"></div>
+  		<div class="bar3"></div>
+		<div id="myDropdown" class="dropdown-content">
+				<a id="howtoplay" href="howToPlay.html">How to play</a>
+				<a id="aboutus" href="about us.html">About us</a>
+		</div>
+	</div>
+
+	<div class="audio" >
+			<audio id="audio" >
+				<source src="audio/Soundtrack.mp3"  >
+			</audio>
+            <button class="audio_Button">
+			    <img src="srcs/mute.png" class="audio_image">
+            </button>
+	</div>
+
+    <div class="div2">
+		<img id="harry" class="photo" src="srcs/Harry.jpg" alt="Be in Harry Team.">
+	</div>
+    <div class="div3">
+		<img id="hermione" class="photo" src="srcs/Hermione.jpg" alt="Be in Hermione Team.">
+	</div>
+    <div class="div4">
+		<img id="ron" class="photo" src="srcs/Ron.jpg" alt="Be in Ron Team.">
+	</div>
+	<div>
+	<div class="label">
+		<label class="choice" for="easy">Easy</label>
+		<input id="easy" name="element_4" class="element_radio" type="radio" value="1" />
+	    <label class="choice" for="intermediate">Intermediate</label>
+	    <input id="intermediate" name="element_4" class="element_radio" type="radio" value="2" />
+		<label class="choice" for="hard">Hard</label>
+		<input id="hard" name="element_4" class="element_radio" type="radio" value="3" />
+	</div>
+	<div class="play">
+			<input  class="playSubmit" type="submit" name="play" value="play" />
+	</div>
+</div>
+	<script src="JavaScript/flipcard.js"></script>
+	<script type="text/javascript" src="JavaScript/level.js"></script>
+	<script type="text/javascript" src="JavaScript/character.js"></script>
+</body>
+</html>

@@ -1,34 +1,79 @@
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 230px;
-  height: 350px;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-img
-{
-	width:230px;
-	height: 250px;
-
-}
-div
-{
-	display: inline-block;
-	margin:30px;
-}
 body
 {
-	background-image: url("background2.jpg");
-	 background-repeat: no-repeat;
-	 background-size: 100%;
+	background-image: url(../srcs/AboutUsBackground.gif);
+	background-size: 100%;
+}
+.baseForm
+{
+    background-color: rgb(255, 182, 193);
+    border: 1px solid rgb(245, 19, 87);
+    padding-top: 25px;
+    width: 490px;
+    height: 550px;
+    position: absolute;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    top: 6%;
+    margin: auto;
+    box-shadow: 3px 3px rgb(245, 19, 87);
+}
+
+.tagline
+{
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    color: rgb(245, 19, 87);
+    font-size: 50px;
+    font-weight: 400;
+    margin: 8px 0px 32px 0px;
+    text-align: center;
+}
+
+.logo
+{
+    margin: auto;
+    position: relative;
+    background-position: center center;
+    background-image: url(../srcs/PPGlogo.png);
+    background-size: 400px 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.playInfo
+{
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    color: rgb(245, 19, 87);
+    font-size: 25px;
+    font-weight: 400; 
+    text-align: center;
+    margin-top: 25px;
+}
+
+.backToMain
+{
+  font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+  font-size: large;
+  width:100px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	background-color: rgb(248, 8, 80);
+	border: none;
+	color: white;
+  padding: 15px 10px;
+  border-radius: 15px;
+ 	text-align: center;
+  display: inline-block;
+  position: absolute;
+  bottom: initial;
+  left: 0;
+  right: 0;
+  top: 86%;
+  margin: auto;
+  outline: none;
+}
+
+.backToMain:hover
+{
+  cursor: pointer;
 }
