@@ -74,8 +74,7 @@ flipCard = function()
     }
     else
     {
-        gameBoar
-        dObj.hasFlippedCard = true;
+        gameBoardObj.hasFlippedCard = true;
         gameBoardObj.firstCard = this;
     }
 }
@@ -111,7 +110,7 @@ function shuffle(indexes) {
 }
 var randomInesxes = shuffle(indexes);
 
-var srces=["Harry","Hermione","BPotter","Rj_V4lBh","Ron","Back","fantasyart","Harry"];
+var srces=["Harry1","Hermione1","Harry2","Ron2","Ron1","Harry3","Harry4","Harry5"];
 
 var board = document.getElementsByClassName("front-face");
 
