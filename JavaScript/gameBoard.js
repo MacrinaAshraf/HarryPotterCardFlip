@@ -1,3 +1,4 @@
+//----------------sound----------------
 var sound=document.getElementsByClassName("audio_Image")[0];
 var soundPaly=0;
 function print()
@@ -20,7 +21,7 @@ function print()
 }
 sound.addEventListener('click',print)
 
-
+//----------------gameLogic----------------
 var gameBoard = function()
 {
     this.firstCard = null;
@@ -109,14 +110,15 @@ function shuffle(indexes) {
     return indexes;
 }
 var randomInesxes = shuffle(indexes);
-
-var srces=["Harry1","Hermione1","Harry2","Ron2","Ron1","Harry3","Harry4","Harry5"];
+var srces = localStorage['chosenChar'];
+srces = srces.split(",");
+localStorage.removeItem( 'chosenChar' );
 
 var board = document.getElementsByClassName("front-face");
 
 for(var i = 0;i<board.length;i+=2)
 {
-    source = "srcs/"+srces[i/2]+".jpg";
+    source = srces[i/2]+".jpg";
     board[randomInesxes[i]].setAttribute('src' , source);
     board[randomInesxes[i+1]].setAttribute('src' , source);
 }

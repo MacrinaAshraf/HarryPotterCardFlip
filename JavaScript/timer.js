@@ -1,5 +1,5 @@
-var seconds = 9;
-var minutes = 1;
+var minutes = localStorage['time']-1;
+var seconds = 59;
 
 var condition=seconds+minutes*60;
 var displaySeconds = 0;
@@ -7,7 +7,7 @@ var displayMinutes = 0;
 
 var interval = null;
 
-
+localStorage.removeItem( 'time' );
 function stopWatch(){
     if(condition!==0)
     {

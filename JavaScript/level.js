@@ -33,17 +33,17 @@ Level.prototype.gettime = function(){
 Level.prototype.settime = function(){
     if(this.level == "Easy")
     {
-        this.Time = 3000;
+        this.Time = 3;
     }
-
-    if(this.level == "Intermediate")
+    else if(this.level == "Intermediate")
     {
-        this.Time = 2000;
+        this.Time = 2;
     }
-    if(this.level == "Hard")
+    else
     {
-        this.Time = 1000;
+        this.Time = 1;
     }
+localStorage.setItem( 'time', this.Time);
 }
 
 

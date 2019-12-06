@@ -16,3 +16,7 @@ function MenuClick(x)
         document.getElementById("myDropdown").classList.add("show");
     }
 }
+var playButton=document.getElementsByClassName("playSubmit")[0];
+playButton.addEventListener('click',function(){ window.location="gameBoard.html"});
+
+
