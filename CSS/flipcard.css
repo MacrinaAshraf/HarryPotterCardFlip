@@ -7,13 +7,10 @@ body
 
 .play
 {
-	/*float: right;*/
 	width: 60px;
 	border-radius: 15px;
-	background-color: #8f0fe49a;
 	border: none;
 	color: black;
-	padding: 15px 30px;
   	display: inline-block;
 	font-size: 25px;
 
@@ -21,10 +18,12 @@ body
 
 .playSubmit
 {	
+	width: 120px;
+	height: 60px;
+	border-radius: 15px;
 	background-color: #8f0fe49a;
 	color: black;
 	border: none;
-	background: transparent;
 	font-size: 100%;
 }
 
