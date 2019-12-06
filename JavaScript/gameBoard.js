@@ -159,10 +159,19 @@ var menuBtn = document.getElementById('backBtn');
 //-----------------back button-----------------------------------
 menuBtn.addEventListener('click', backFun);
 
-function backFun () {
-    var check = confirm("You are about to close the game and lose your progress, Are you sure?");
-
-    if(check){
+function backFun () 
+{
+    var Status = document.getElementsByClassName("Status")[0];
+    if(!Status.classList.contains('show'))
+    {
+        var check = confirm("You are about to close the game and lose your progress, Are you sure?");
+        if(check)
+        {
+            window.location = 'flipCard.html';
+        }
+    }
+    else
+    {
         window.location = 'flipCard.html';
     }
 }
