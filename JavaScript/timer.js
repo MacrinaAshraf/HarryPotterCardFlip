@@ -1,88 +1,90 @@
 var minutes ;
+
 console.log(typeof(localStorage['time']));
 console.log(localStorage['defaultTime']);
+
 if (localStorage.getItem("time") !== null) 
 {
     console.log("1");
-    minutes=localStorage['time'];
+    minutes = localStorage['time'];
 }
-else if (localStorage['defaultTime']!== null)
+else if (localStorage['defaultTime'] !== null)
 {
     console.log("2");
-    minutes=localStorage['defaultTime'];
+    minutes = localStorage['defaultTime'];
 }
 else
 {
     alert('you should chose character and level');
-    window.location="mainPage.html";
+    window.location = "mainPage.html";
 }
 
 
-    var minutes = minutes- 1;
-    var seconds = 59;
+var minutes = minutes- 1;
+var seconds = 59;
 
-    var condition = seconds + minutes * 60;
-    var displaySeconds = 0;
-    var displayMinutes = 0;
+var condition = seconds + minutes * 60;
+var displaySeconds = 0;
+var displayMinutes = 0;
 
-    var interval = null;
+var interval = null;
 
-    localStorage.removeItem('time');
-   
-    function stopWatch()
+localStorage.removeItem('time');
+
+function stopWatch()
+{
+    //console.log(condition);
+    //console.log("condition");
+    if(condition !== 0)
     {
-        //console.log(condition);
-        //console.log("condition");
-        if(condition!==0)
+        condition--;
+        seconds--;
+        if(seconds  === -1)
         {
-            condition--;
-            seconds--;
-            if(seconds  === -1)
-            {
-                seconds = 59;
-                minutes--;
-            }
-            if(seconds < 10){
-                displaySeconds = "0" + seconds.toString();
-            }
-            else{
-                displaySeconds = seconds;
-            }
-
-            if(minutes < 10){
-                displayMinutes = "0" + minutes.toString();
-            }
-            else{
-                displayMinutes = minutes;
-            }
-
-            document.getElementById("timerLable").innerHTML =  displayMinutes + ":" + displaySeconds;
+            seconds = 59;
+            minutes--;
         }
-        
+        if(seconds < 10){
+            displaySeconds = "0" + seconds.toString();
+        }
+        else{
+            displaySeconds = seconds;
+        }
+
+        if(minutes < 10){
+            displayMinutes = "0" + minutes.toString();
+        }
+        else{
+            displayMinutes = minutes;
+        }
+
+        document.getElementById("timerLable").innerHTML = displayMinutes + ":" + displaySeconds;
+    }
+    
+    else
+    {
+        document.getElementById("timerLable").innerHTML = "00:00";
+        var Cells = document.getElementsByClassName('cellDiv');
+        var Status = document.getElementsByClassName("Status")[0];
+        if(!Status.classList.contains('show'))
+        {
+            for(var i = 0; i < Cells.length; i++)
+            {
+                Cells[i].classList.add("hide");
+            }
+            Status.setAttribute('src', "srcs/Lose.gif");
+            Status.classList.remove('hide');
+            Status.classList.add("show");
+        }
+
         else
         {
-            document.getElementById("timerLable").innerHTML =  "00:00";
-            var Cells = document.getElementsByClassName('cellDiv');
-            var Status = document.getElementsByClassName("Status")[0];
-            if(!Status.classList.contains('show'))
-            {
-                for(var i = 0;i<Cells.length;i++)
-                {
-                    Cells[i].classList.add("hide");
-                }
-                Status.setAttribute('src' , "srcs/Lose.gif");
-                Status.classList.remove('hide');
-                Status.classList.add("show");
-            }
-
-            else
-            {
-                displayMinutes = minutes;
-            }
-
-            document.getElementById("timerLable").innerHTML =  displayMinutes + ":" + displaySeconds;
+            displayMinutes = minutes;
         }
+
+        document.getElementById("timerLable").innerHTML = displayMinutes + ":" + displaySeconds;
     }
-    interval = window.setInterval(stopWatch, 1000);
+}
+interval = window.setInterval(stopWatch, 1000);
 
   

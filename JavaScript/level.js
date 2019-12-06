@@ -1,7 +1,7 @@
 var levels=document.getElementsByClassName('element_radio');
 
 var Level = function(){
-    this.Time=3;
+    this.Time = 3;
     this.level;
     localStorage.setItem('defaultTime', this.Time);
 }
@@ -42,12 +42,8 @@ Level.prototype.settime = function(){
     {
         this.Time = 1;
     }
-localStorage.setItem('time', this.Time);
+    localStorage.setItem('time', this.Time);
 }
-
-
-var easy = new Level();
-
 
 var easy = new Level();
 
@@ -58,7 +54,6 @@ for(radio in radios) {
         easy.getlevel()
         easy.settime();
         easy.gettime();
-        //alert(this.value);
     }
 }
 
