@@ -1,19 +1,19 @@
 //----------------sound----------------
-var sound=document.getElementsByClassName("audio_Image")[0];
-var soundPaly=0;
+var sound = document.getElementsByClassName("audio_Image")[0];
+var soundPaly = 0;
 function print()
 {
     console.log(sound.src.name)    
-    if(soundPaly==0)
+    if(soundPaly == 0)
     {
-        soundPaly=1;
+        soundPaly = 1;
         sound.setAttribute('src' , "srcs/audio.jpg");
         document.getElementById("audio").play();
         document.getElementById("audio").loop = true;
     }
     else
     {
-        soundPaly=0;
+        soundPaly = 0;
         sound.setAttribute('src' , "srcs/mute.png");
         document.getElementById("audio").pause();
     }
@@ -87,11 +87,6 @@ unflipCards = function(firstCard, secondCard)
     gameBoardObj.resetBoardVars();
 }
 
-var win = function (argument) {
-    // body...
-    
-}
-
 const cards = document.getElementsByClassName('cellDiv');
 for(var i = 0; i < cards.length; i++)
 {
@@ -117,7 +112,7 @@ function shuffle(indexes) {
 var randomInesxes = shuffle(indexes);
 var srces = localStorage['chosenChar'];
 srces = srces.split(",");
-localStorage.removeItem( 'chosenChar' );
+localStorage.removeItem('chosenChar');
 
 var board = document.getElementsByClassName("front-face");
 
@@ -132,10 +127,12 @@ for(var i = 0;i<board.length;i+=2)
 
 var menuBtn = document.getElementById('backBtn');
 
+
+//-----------------back button-----------------------------------
 menuBtn.addEventListener('click', backFun);
 
 function backFun () {
-    var check = confirm("You are about to close the game, Are you sure?");
+    var check = confirm("You are about to close the game and lose your progress, Are you sure?");
 
     if(check){
         window.location = 'flipCard.html';

@@ -17,7 +17,7 @@ character.prototype.setCharArr = function(chosenChar)
         this.charArr = this.hermonie;
     else
         this.charArr = this.ron;
-    localStorage.setItem( 'chosenChar', this.charArr);
+    localStorage.setItem('chosenChar', this.charArr);
     }
 
 
@@ -31,13 +31,8 @@ for (var i = 0; i < divs.length; i++) {
 }
 
 function prepareCharacter() {
-    // this.classList.add('clicked');
     if (divClicked != this) {
         divClicked = this;
         obj.setCharArr(divClicked.id);
-        // this.classList.remove('clicked');
     }
-    //console.log(obj.getCharArr());
-    //return divClicked;
 }
-//console.log(divClicked);

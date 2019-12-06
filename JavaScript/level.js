@@ -39,11 +39,11 @@ Level.prototype.settime = function(){
     {
         this.Time = 2;
     }
-    else
+    else if(this.level == "Hard")
     {
         this.Time = 1;
     }
-localStorage.setItem( 'time', this.Time);
+    localStorage.setItem('time', this.Time);
 }
 
 
